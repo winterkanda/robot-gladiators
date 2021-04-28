@@ -6,12 +6,26 @@ var playerMoney = 10;
 // You can also log multiple values at once like this
 console.log(playerName, playerAttack, playerHealth);
 
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
+// console.log(enemyNames.length);
+
+// for(var i = 0; i < enemyNames.length; i++) {
+//     console.log(enemyNames[i]);
+//     console.log(i);
+//     console.log(enemyNames[i] + " is at " + i + " index");
+// }
+
+// console.log(enemyNames[0]);
+// console.log(enemyNames[1]);
+// console.log(enemyNames[2]);
+
+
+
 // this is a function expression, where we create the var first and then the function, used to create a function by assigning it to a variable
-var fight = function() {
+var fight = function(enemyName) {
     //alert players that they're starting the round
   window.alert("Welcome to Robot Gladiators!");
 
@@ -68,5 +82,7 @@ var fight = function() {
     }
 };
 
-    //here the function is executed and is returned indicated by the semicolon
-fight();
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+  }
+ 
